@@ -4,9 +4,9 @@ A read-only reviewer for a TypeScript snapshot and a diff. The plan is `Kevin Wa
 
 ## Status
 
-Implemented: `review-task/v1`, `review-result/v1`, five fixtures with independent expected findings, diff routing, and a trusted ESLint adapter. `make verify` checks the contracts and that repeat runs return the same routes and static findings. No credentials are required.
+Implemented: `review-task/v1`, `review-result/v1`, five fixtures with independent expected findings, diff routing, a trusted ESLint adapter, and context selection. `make verify` checks the contracts, repeatable routes, and the context budget. No credentials are required.
 
-Planned: context selection, a recorded model loop, reports, a fresh-checkout demo, and later an isolated patch runner. Repair is unavailable.
+Planned: a recorded model loop, reports, a fresh-checkout demo, and later an isolated patch runner. Repair is unavailable.
 
 ## Verify
 

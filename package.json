@@ -6,7 +6,7 @@
     "node": ">=22.18"
   },
   "scripts": {
-    "test": "node --experimental-strip-types --test tests/router.test.ts",
+    "test": "node --experimental-strip-types --test tests/router.test.ts tests/context.test.ts",
     "verify": "npm test"
   },
   "devDependencies": {
