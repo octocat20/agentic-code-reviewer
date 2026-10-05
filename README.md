@@ -4,15 +4,18 @@ A read-only reviewer for a TypeScript snapshot and a diff. The plan is `Kevin Wa
 
 ## Status
 
-Implemented: `review-task/v1`, `review-result/v1`, and five fixtures with independent expected findings. `make verify` checks those contracts without credentials.
+Implemented: `review-task/v1`, `review-result/v1`, five fixtures with independent expected findings, diff routing, and a trusted ESLint adapter. `make verify` checks the contracts and that repeat runs return the same routes and static findings. No credentials are required.
 
-Planned: diff routing and ESLint, context selection, a recorded model loop, reports, a fresh-checkout demo, and later an isolated patch runner. Repair is unavailable.
+Planned: context selection, a recorded model loop, reports, a fresh-checkout demo, and later an isolated patch runner. Repair is unavailable.
 
 ## Verify
 
 ```sh
+npm install
 make verify
 ```
+
+Routing keeps every changed path. TypeScript sources and tests go to ESLint through `prescan/eslint.config.js`. A config file inside the snapshot is not loaded. Generated, configuration, and unsupported files stay in the route list. A path that leaves the snapshot, including through a symlink, is excluded and not linted.
 
 ## Fixtures
 

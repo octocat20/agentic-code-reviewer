@@ -1,0 +1,16 @@
+{
+  "name": "agentic-code-reviewer",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types --test tests/router.test.ts",
+    "verify": "npm test"
+  },
+  "devDependencies": {
+    "eslint": "^9.36.0",
+    "typescript-eslint": "^8.44.0"
+  }
+}
