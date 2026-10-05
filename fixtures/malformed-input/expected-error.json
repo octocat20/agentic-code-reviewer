@@ -1,0 +1,4 @@
+{
+  "valid": false,
+  "missing": ["snapshot_digest", "diff_digest", "policy_digest", "model", "budgets"]
+}

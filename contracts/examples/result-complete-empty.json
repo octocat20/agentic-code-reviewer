@@ -1,0 +1,16 @@
+{
+  "schema_version": "review-result/v1",
+  "task_id": "example-clean",
+  "run_id": "example-clean-1",
+  "input_digests": {
+    "snapshot": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "diff": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "policy": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+  },
+  "outcome": "complete",
+  "findings": [],
+  "rejected_findings": [],
+  "usage": { "input_tokens": 0, "output_tokens": 0, "tool_calls": 0 },
+  "errors": [],
+  "artifacts": []
+}

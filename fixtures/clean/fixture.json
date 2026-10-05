@@ -1,0 +1,4 @@
+{
+  "changed_paths": ["src/greet.ts"],
+  "head_snapshot": "snapshot/head"
+}

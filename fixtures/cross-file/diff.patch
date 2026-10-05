@@ -1,0 +1,9 @@
+--- a/src/order.ts
++++ b/src/order.ts
+@@ -1,5 +1,5 @@
+ import { applyDiscount } from "./discount";
+ 
+ export function charge(totalCents: number): number {
+-  return totalCents;
++  return applyDiscount(totalCents);
+ }

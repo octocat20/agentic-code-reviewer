@@ -1,0 +1,11 @@
+{
+  "task_id": "local-defect",
+  "findings": [
+    {
+      "category": "defect",
+      "explanation": "formatPrice accepts undefined and then calls toFixed on that value.",
+      "head": { "path": "src/cart.ts", "start_line": 2, "end_line": 2 },
+      "supporting": []
+    }
+  ]
+}

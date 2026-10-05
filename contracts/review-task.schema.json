@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "review-task/v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id",
+    "schema_version",
+    "base_revision",
+    "head_revision",
+    "snapshot_digest",
+    "diff_digest",
+    "policy_digest",
+    "run_mode",
+    "model",
+    "budgets"
+  ],
+  "properties": {
+    "task_id": { "type": "string", "minLength": 1 },
+    "schema_version": { "const": "review-task/v1" },
+    "base_revision": { "type": "string", "minLength": 1 },
+    "head_revision": { "type": "string", "minLength": 1 },
+    "snapshot_digest": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "diff_digest": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "policy_digest": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "run_mode": { "enum": ["recorded", "live"] },
+    "model": { "$ref": "#/$defs/model" },
+    "budgets": { "$ref": "#/$defs/budgets" }
+  },
+  "$defs": {
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["provider", "model_id", "configuration_digest"],
+      "properties": {
+        "provider": { "type": "string", "minLength": 1 },
+        "model_id": { "type": "string", "minLength": 1 },
+        "configuration_digest": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    },
+    "budgets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["token_budget", "tool_calls", "timeout_seconds"],
+      "properties": {
+        "token_budget": { "type": "integer", "minimum": 1 },
+        "tool_calls": { "type": "integer", "minimum": 0 },
+        "timeout_seconds": { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}

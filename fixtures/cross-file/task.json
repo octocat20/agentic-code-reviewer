@@ -1,0 +1,20 @@
+{
+  "task_id": "cross-file",
+  "schema_version": "review-task/v1",
+  "base_revision": "base-cross-file",
+  "head_revision": "head-cross-file",
+  "snapshot_digest": "40184b661671378d48fd0f58f053dbbcc44db67b679a6de13cff7935a03ec3fe",
+  "diff_digest": "6379b3bf241950b6d590880ccc2a10fda10fae9ecdedaef73c701981799b13fb",
+  "policy_digest": "f7a6e8278ccda694f4f8c7712871d4e2726e5187a39af22f3c62d31020afef11",
+  "run_mode": "recorded",
+  "model": {
+    "provider": "recorded",
+    "model_id": "fixture",
+    "configuration_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+  },
+  "budgets": {
+    "token_budget": 8000,
+    "tool_calls": 4,
+    "timeout_seconds": 30
+  }
+}

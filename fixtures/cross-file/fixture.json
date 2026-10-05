@@ -1,0 +1,5 @@
+{
+  "changed_paths": ["src/order.ts"],
+  "unchanged_paths": ["src/discount.ts"],
+  "head_snapshot": "snapshot/head"
+}

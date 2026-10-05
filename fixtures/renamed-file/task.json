@@ -1,0 +1,20 @@
+{
+  "task_id": "renamed-file",
+  "schema_version": "review-task/v1",
+  "base_revision": "base-renamed-file",
+  "head_revision": "head-renamed-file",
+  "snapshot_digest": "0f2f60d913030b3ad6774cbd313ea00f44570823793e5246a0ad6879b8f078ea",
+  "diff_digest": "8ace22f539a031129997908c4d9ec4af67f601df90860291df8473b6923b36d9",
+  "policy_digest": "f7a6e8278ccda694f4f8c7712871d4e2726e5187a39af22f3c62d31020afef11",
+  "run_mode": "recorded",
+  "model": {
+    "provider": "recorded",
+    "model_id": "fixture",
+    "configuration_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+  },
+  "budgets": {
+    "token_budget": 8000,
+    "tool_calls": 4,
+    "timeout_seconds": 30
+  }
+}

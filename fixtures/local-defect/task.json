@@ -1,0 +1,20 @@
+{
+  "task_id": "local-defect",
+  "schema_version": "review-task/v1",
+  "base_revision": "base-local-defect",
+  "head_revision": "head-local-defect",
+  "snapshot_digest": "736350644e8abbfacc607a9c3678aae8564c5e8c421e27d817bb966dbbb84cd8",
+  "diff_digest": "e6195dc63e0544a0edfa2312297823f60d3b91b5aabc9941f6cd17be1766b357",
+  "policy_digest": "f7a6e8278ccda694f4f8c7712871d4e2726e5187a39af22f3c62d31020afef11",
+  "run_mode": "recorded",
+  "model": {
+    "provider": "recorded",
+    "model_id": "fixture",
+    "configuration_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+  },
+  "budgets": {
+    "token_budget": 8000,
+    "tool_calls": 4,
+    "timeout_seconds": 30
+  }
+}

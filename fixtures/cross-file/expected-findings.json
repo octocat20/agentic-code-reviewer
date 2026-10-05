@@ -1,0 +1,13 @@
+{
+  "task_id": "cross-file",
+  "findings": [
+    {
+      "category": "defect",
+      "explanation": "charge passes an amount in cents to applyDiscount, which expects a fractional rate.",
+      "head": { "path": "src/order.ts", "start_line": 4, "end_line": 4 },
+      "supporting": [
+        { "path": "src/discount.ts", "start_line": 2, "end_line": 2 }
+      ]
+    }
+  ]
+}

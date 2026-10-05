@@ -1,0 +1,20 @@
+{
+  "task_id": "clean",
+  "schema_version": "review-task/v1",
+  "base_revision": "base-clean",
+  "head_revision": "head-clean",
+  "snapshot_digest": "32a263b2df54c9c7da1e5d17027344228603d3f6cdb88f23d82262c0c946f48e",
+  "diff_digest": "3f5e9a856375b96eeeae27c70ed03a19897d97f7e0c8b1dcdfd38316728d5a1d",
+  "policy_digest": "f7a6e8278ccda694f4f8c7712871d4e2726e5187a39af22f3c62d31020afef11",
+  "run_mode": "recorded",
+  "model": {
+    "provider": "recorded",
+    "model_id": "fixture",
+    "configuration_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+  },
+  "budgets": {
+    "token_budget": 8000,
+    "tool_calls": 4,
+    "timeout_seconds": 30
+  }
+}

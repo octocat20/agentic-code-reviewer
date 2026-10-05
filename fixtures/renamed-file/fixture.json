@@ -1,0 +1,6 @@
+{
+  "changed_paths": ["src/old-tax.ts", "src/tax.ts"],
+  "head_snapshot": "snapshot/head",
+  "base_snapshot": "snapshot/base",
+  "forbidden_head_paths": ["src/old-tax.ts"]
+}

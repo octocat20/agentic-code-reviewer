@@ -1,0 +1,4 @@
+{
+  "max_findings": 20,
+  "allowed_tools": ["read_file"]
+}

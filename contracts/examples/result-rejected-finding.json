@@ -1,0 +1,21 @@
+{
+  "schema_version": "review-result/v1",
+  "task_id": "example-rejected",
+  "run_id": "example-rejected-1",
+  "input_digests": {
+    "snapshot": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "diff": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "policy": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+  },
+  "outcome": "complete",
+  "findings": [],
+  "rejected_findings": [
+    {
+      "reason": "invalid-location",
+      "raw_response_ref": "runs/example/raw-response.json"
+    }
+  ],
+  "usage": { "input_tokens": 80, "output_tokens": 20, "tool_calls": 0 },
+  "errors": [],
+  "artifacts": ["runs/example/raw-response.json"]
+}

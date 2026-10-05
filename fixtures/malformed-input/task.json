@@ -1,0 +1,7 @@
+{
+  "task_id": "malformed-input",
+  "schema_version": "review-task/v0",
+  "base_revision": "base-malformed",
+  "head_revision": "head-malformed",
+  "run_mode": "recorded"
+}

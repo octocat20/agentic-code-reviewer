@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "review-result/v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "task_id",
+    "run_id",
+    "input_digests",
+    "outcome",
+    "findings",
+    "rejected_findings",
+    "usage",
+    "errors",
+    "artifacts"
+  ],
+  "properties": {
+    "schema_version": { "const": "review-result/v1" },
+    "task_id": { "type": "string", "minLength": 1 },
+    "run_id": { "type": "string", "minLength": 1 },
+    "input_digests": { "$ref": "#/$defs/input_digests" },
+    "outcome": { "enum": ["complete", "partial", "failed"] },
+    "findings": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/finding" }
+    },
+    "rejected_findings": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/rejected_finding" }
+    },
+    "usage": { "$ref": "#/$defs/usage" },
+    "errors": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/error" }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    }
+  },
+  "$defs": {
+    "input_digests": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["snapshot", "diff", "policy"],
+      "properties": {
+        "snapshot": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "diff": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "policy": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    },
+    "location": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["snapshot", "path", "start_line", "end_line"],
+      "properties": {
+        "snapshot": { "enum": ["base", "head"] },
+        "path": { "type": "string", "minLength": 1 },
+        "start_line": { "type": "integer", "minimum": 1 },
+        "end_line": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "finding_id",
+        "category",
+        "location",
+        "explanation",
+        "supporting_locations",
+        "origin",
+        "structural_validation"
+      ],
+      "properties": {
+        "finding_id": { "type": "string", "minLength": 1 },
+        "category": { "type": "string", "minLength": 1 },
+        "location": { "$ref": "#/$defs/location" },
+        "explanation": { "type": "string", "minLength": 1 },
+        "supporting_locations": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/location" }
+        },
+        "origin": { "enum": ["static", "model"] },
+        "structural_validation": { "enum": ["passed", "failed"] }
+      }
+    },
+    "rejected_finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reason", "raw_response_ref"],
+      "properties": {
+        "reason": {
+          "enum": ["invalid-schema", "invalid-location", "duplicate", "out-of-scope"]
+        },
+        "raw_response_ref": { "type": "string", "minLength": 1 }
+      }
+    },
+    "usage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["input_tokens", "output_tokens", "tool_calls"],
+      "properties": {
+        "input_tokens": { "type": "integer", "minimum": 0 },
+        "output_tokens": { "type": "integer", "minimum": 0 },
+        "tool_calls": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "message"],
+      "properties": {
+        "code": { "type": "string", "minLength": 1 },
+        "message": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

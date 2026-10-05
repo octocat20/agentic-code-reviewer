@@ -1,0 +1,12 @@
+{
+  "task_id": "renamed-file",
+  "findings": [
+    {
+      "category": "defect",
+      "explanation": "tax multiplies integer cents by a decimal rate, so the head location is src/tax.ts.",
+      "head": { "path": "src/tax.ts", "start_line": 2, "end_line": 2 },
+      "supporting": []
+    }
+  ],
+  "forbidden_head_paths": ["src/old-tax.ts"]
+}

@@ -1,0 +1,20 @@
+{
+  "task_id": "example-clean",
+  "schema_version": "review-task/v1",
+  "base_revision": "base-example",
+  "head_revision": "head-example",
+  "snapshot_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "diff_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "policy_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "run_mode": "recorded",
+  "model": {
+    "provider": "recorded",
+    "model_id": "fixture",
+    "configuration_digest": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+  },
+  "budgets": {
+    "token_budget": 8000,
+    "tool_calls": 4,
+    "timeout_seconds": 30
+  }
+}

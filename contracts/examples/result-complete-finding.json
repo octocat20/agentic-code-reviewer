@@ -1,0 +1,31 @@
+{
+  "schema_version": "review-result/v1",
+  "task_id": "example-defect",
+  "run_id": "example-defect-1",
+  "input_digests": {
+    "snapshot": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "diff": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "policy": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+  },
+  "outcome": "complete",
+  "findings": [
+    {
+      "finding_id": "finding-1",
+      "category": "defect",
+      "location": {
+        "snapshot": "head",
+        "path": "src/cart.ts",
+        "start_line": 2,
+        "end_line": 2
+      },
+      "explanation": "A head location inside the snapshot.",
+      "supporting_locations": [],
+      "origin": "model",
+      "structural_validation": "passed"
+    }
+  ],
+  "rejected_findings": [],
+  "usage": { "input_tokens": 120, "output_tokens": 40, "tool_calls": 1 },
+  "errors": [],
+  "artifacts": ["runs/example/report.json"]
+}
